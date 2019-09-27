@@ -1,0 +1,17 @@
+##
+# Making things easier!
+#
+
+##
+# Ruby
+#
+alias be="bundle exec "
+alias bes="bundle exec spring "
+alias ql="qlmanage -p "
+
+
+alias jsonppp="json_pp --json_opt=canonical,pretty "
+alias proxysettings="vim /usr/local/var/www/proxy.pac"
+alias todo="vim ~/Dropbox/Apps/Editorial/daily.taskpaper"
+alias av_on="sudo launchctl load /Library/LaunchDaemons/*.mcafee.*"
+alias av_off="sudo launchctl unload /Library/LaunchDaemons/*.mcafee.*"

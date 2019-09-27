@@ -1,0 +1,46 @@
+[user]
+  email = mrhanlon@gmail.com
+  name = Matthew R Hanlon
+
+[color]
+  branch = auto
+  diff = auto
+  status = auto
+
+[color "branch"]
+  current = yellow reverse
+  local = yellow
+  remote = green
+
+[color "diff"]
+  meta = yellow bold
+  frag = magenta bold
+  old = red bold
+  new = green bold
+
+[color "status"]
+  added = yellow
+  changed = green
+  untracked = cyan
+
+[alias]
+  st = status
+  ci = commit
+  ca = commit --amend
+  br = branch
+  co = checkout
+  df = diff
+  lg = log -p
+  ap = add --patch
+  rb = rebase
+  rn = branch -m
+  cam = commit -a -m
+  cp = cherry-pick
+	lol = log --graph --decorate --pretty=oneline --abbrev-commit --all
+	lol = log --graph --decorate --abbrev-commit --all --date=local --pretty=format:\"%C(auto)%h%d %C(blue)%an %C(green)%cd %C(red)%GG %C(reset)%s\" --date=local
+  head = rev-parse HEAD
+  top = rev-parse HEAD
+
+[core]
+	excludesfile = /Users/mrhanlon/.gitignore_global
+
