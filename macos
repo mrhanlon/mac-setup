@@ -48,6 +48,14 @@ defaults write com.apple.print.PrintingPrefs "Quit When Finished" -bool true
 # (e.g. enable Tab in modal dialogs)
 defaults write NSGlobalDomain AppleKeyboardUIMode -int 3
 
+# Use F1, F2, etc. keys as standard function keys on external keyboards
+defaults write -globalDomain com.apple.keyboard.fnState -int 1
+
+# Remap right Option to Control
+hidutil property --set '{"UserKeyMapping":[{"HIDKeyboardModifierMappingSrc":0x7000000e6,"HIDKeyboardModifierMappingDst":0x7000000e4}]}'
+# Reset key remapping
+# hidutil property --set '{"UserKeyMapping":[{}]}'
+
 ###############################################################################
 # Screen                                                                      #
 ###############################################################################
@@ -118,9 +126,9 @@ defaults write com.apple.desktopservices DSDontWriteNetworkStores -bool true
 defaults write com.apple.desktopservices DSDontWriteUSBStores -bool true
 
 # Automatically open a new Finder window when a volume is mounted
-defaults write com.apple.frameworks.diskimages auto-open-ro-root -bool true
-defaults write com.apple.frameworks.diskimages auto-open-rw-root -bool true
-defaults write com.apple.finder OpenWindowForNewRemovableDisk -bool true
+#defaults write com.apple.frameworks.diskimages auto-open-ro-root -bool true
+#defaults write com.apple.frameworks.diskimages auto-open-rw-root -bool true
+#defaults write com.apple.finder OpenWindowForNewRemovableDisk -bool true
 
 # Use list view in all Finder windows by default
 # Four-letter codes for the other view modes: `icnv`, `clmv`, `glyv`

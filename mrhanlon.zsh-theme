@@ -101,7 +101,6 @@ function steeef_precmd {
 }
 add-zsh-hook precmd steeef_precmd
 
-HOSTNAME=$(scutil --get ComputerName)
 PROMPT=$'
-%{$limegreen%}%~%{$reset_color%} $vcs_info_msg_0_$(virtualenv_info)%{$reset_color%}
-%{$purple%}%n%{$reset_color%}@%{$orange%}$HOSTNAME%{$reset_color%} %{$turquoise%}φ%{$reset_color%} '
+%{$limegreen%}%~${PR_RST} $vcs_info_msg_0_$(virtualenv_info)
+%{$purple%}%n${PR_RST}@%{$orange%}%m${PR_RST}%{$turquoise%} ∴${PR_RST} '

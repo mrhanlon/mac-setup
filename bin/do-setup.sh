@@ -4,6 +4,7 @@
 mkdir -p $HOME/.tmux/plugins
 
 ln -s $HOME/mac-setup/aliases $HOME/.aliases
+mv $HOME/.zshrc $HOME/.zshrc.backup
 ln -s $HOME/mac-setup/zshrc $HOME/.zshrc
 ln -s $HOME/mac-setup/vimrc $HOME/.vimrc
 ln -s $HOME/mac-setup/vim $HOME/.vim

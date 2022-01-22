@@ -85,7 +85,7 @@ source $ZSH/oh-my-zsh.sh
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
 # PATH
-export PATH="$HOME/bin:/usr/X11/bin:/usr/local/opt/python/libexec/bin:$PATH"
+export PATH="$HOME/bin:/usr/local/sbin:/usr/X11/bin:/usr/local/opt/python/libexec/bin:$PATH"
 
 # Any extra local configs
 if [[ -a $HOME/.zshrc-local ]]; then
