@@ -190,7 +190,6 @@ tmux_conf_theme_window_status_last_bg="$tmux_conf_theme_colour_2"
 tmux_conf_theme_window_status_last_attr="none"
 
 # status left/right sections separators
-# -- @mrhanlon -----------------------------------------------------------------
 #tmux_conf_theme_left_separator_main=""
 #tmux_conf_theme_left_separator_sub="|"
 #tmux_conf_theme_right_separator_main=""
@@ -271,7 +270,6 @@ tmux_conf_theme_synchronized_bg="none"
 tmux_conf_theme_synchronized_attr="none"
 
 # battery bar symbols
-# -- @mrhanlon -----------------------------------------------------------------
 #tmux_conf_battery_bar_symbol_full="◼"
 #tmux_conf_battery_bar_symbol_empty="◻"
 tmux_conf_battery_bar_symbol_full="♥"
@@ -330,8 +328,7 @@ tmux_conf_copy_to_os_clipboard=true
 # this is the place to override or undo settings
 
 # increase history size
-# -- @mrhanlon -----------------------------------------------------------------
-set -g history-limit 10000
+set -g history-limit 20000
 
 # start with mouse mode enabled
 # -- @mrhanlon -----------------------------------------------------------------
@@ -352,6 +349,7 @@ set -g mouse on
 # move status line to top
 #set -g status-position top
 
+
 # -- tpm -----------------------------------------------------------------------
 
 # while I don't use tpm myself, many people requested official support so here
@@ -371,6 +369,17 @@ tmux_conf_update_plugins_on_launch=true
 #   - false
 tmux_conf_update_plugins_on_reload=true
 
+# by default, reloading the configuration will uninstall tpm and plugins when no
+# plugins are enabled
+#   - true (default)
+#   - false
+tmux_conf_uninstall_plugins_on_reload=true
+
+# /!\ the tpm bindings differ slightly from upstream:
+#   - installing plugins: <prefix> + I
+#   - uninstalling plugins: <prefix> + Alt + u
+#   - updating plugins: <prefix> + u
+
 # /!\ do not add set -g @plugin 'tmux-plugins/tpm'
 # /!\ do not add run '~/.tmux/plugins/tpm/tpm'
 
@@ -381,12 +390,6 @@ tmux_conf_update_plugins_on_reload=true
 #set -g @plugin 'tmux-plugins/tmux-resurrect'
 #set -g @plugin 'tmux-plugins/tmux-continuum'
 #set -g @continuum-restore 'on'
-
-# -- @mrhanlon -----------------------------------------------------------------
-
-set -g @plugin 'tmux-plugins/tpm'
-set -g @plugin 'tmux-plugins/tmux-sensible'
-set -g @plugin 'tmux-plugins/tmux-resurrect'
 
 
 # -- custom variables ----------------------------------------------------------
@@ -415,17 +418,3 @@ set -g @plugin 'tmux-plugins/tmux-resurrect'
 #
 # "$@"
 # # /!\ do not remove the previous line
-
-
-# -- @mrhanlon -----------------------------------------------------------------
-
-#bind C-k clear-history
-bind -n C-k send-keys -R \; clear-history
-
-# Unbind C-a
-set -gu prefix2
-unbind C-a
-unbind C-b
-set -g prefix C-b
-bind C-b send-prefix
-
