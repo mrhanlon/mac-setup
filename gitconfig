@@ -42,7 +42,7 @@
   top = rev-parse HEAD
 
 [core]
-  excludesfile = /Users/mrhanlon/.gitignore_global
+  excludesfile = ~/.gitignore_global
 
 [pager]
   branch = false
