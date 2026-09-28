@@ -15,3 +15,4 @@ alias proxysettings="vim /usr/local/var/www/proxy.pac"
 alias todo="vim ~/Dropbox/Apps/Editorial/daily.taskpaper"
 alias av_on="sudo launchctl load /Library/LaunchDaemons/*.mcafee.*"
 alias av_off="sudo launchctl unload /Library/LaunchDaemons/*.mcafee.*"
+

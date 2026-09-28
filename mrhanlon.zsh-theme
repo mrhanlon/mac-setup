@@ -1,6 +1,3 @@
-#
-# based on themes/steeef.zsh-theme
-#
 # prompt style and colors based on Steve Losh's Prose theme:
 # https://github.com/sjl/oh-my-zsh/blob/master/themes/prose.zsh-theme
 #
@@ -24,11 +21,16 @@ autoload -Uz vcs_info
 
 #use extended color palette if available
 if [[ $terminfo[colors] -ge 256 ]]; then
-    turquoise="%F{81}"
-    orange="%F{166}"
-    purple="%F{135}"
-    hotpink="%F{161}"
-    limegreen="%F{118}"
+#    turquoise="%F{81}"
+#    orange="%F{166}"
+#    purple="%F{135}"
+#    hotpink="%F{161}"
+#    limegreen="%F{118}"
+    turquoise="%F{6}"
+    orange="%F{3}"
+    purple="%F{5}"
+    hotpink="%F{1}"
+    limegreen="%F{2}"
 else
     turquoise="%F{cyan}"
     orange="%F{yellow}"
@@ -102,5 +104,6 @@ function steeef_precmd {
 add-zsh-hook precmd steeef_precmd
 
 PROMPT=$'
-%{$limegreen%}%~${PR_RST} $vcs_info_msg_0_$(virtualenv_info)
-%{$purple%}%n${PR_RST}@%{$orange%}%m${PR_RST}%{$turquoise%} ∴${PR_RST} '
+%{$purple%}%n${PR_RST} at %{$orange%}%m${PR_RST} in %{$limegreen%}%~${PR_RST} $vcs_info_msg_0_$(virtualenv_info)
+$ '
+

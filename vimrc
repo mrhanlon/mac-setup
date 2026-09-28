@@ -1,12 +1,12 @@
 " A Good `.vimrc` from https://dougblack.io/words/a-good-vimrc.html
 
 " PLUGINS
-filetype plugin on
-let g:auto_save = 1 
+"filetype plugin on
+"let g:auto_save = 1 
 
 " COLORS
 
-colorscheme badwolf
+colorscheme catppuccin_mocha
 
 
 " SYNTAX
@@ -23,6 +23,7 @@ set expandtab
 set smarttab
 
 " BACKSPACE
+
 set backspace=2
 
 " UI CONFIG
@@ -37,6 +38,7 @@ set showmatch
 set incsearch
 set hlsearch
 
+hi LineNr term=bold ctermfg=Black guifg=#45477A
 
 " FOLDING
 
