@@ -2,7 +2,5 @@ if [[ -f $HOME/.aliases ]]; then
   source $HOME/.aliases
 fi
 
-autoload -U compinit; compinit
-
 export PATH=~/.local/bin:$PATH
 
